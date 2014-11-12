@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* img list
+ * used: index
+ */
+.m_recommendImgList{}
+.recommendImgList_bd .listWrap{ margin-left: -50px;}
+.recommendImgList_bd .listWrap li{ width: 148px; height: 91px; border: 1px solid #fff; background: #fff;}
+.recommendImgList_bd .listWrap a:hover{ opacity: 0.8;}
+.recommendImgList_bd .listWrap img{ width: 100%; height: 100%;}
+/* img list end */

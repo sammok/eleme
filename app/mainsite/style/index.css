@@ -1,0 +1,229 @@
+@charset "utf-8";
+/*
+ * author: sam mok,
+ * begin at: 2014年11月4日 20:14:22 AM;
+*/
+
+/* panel */
+.m_panel{ box-shadow: 0 1px 2px rgba(0,0,0,0.3);}
+.panel_hd{ line-height: 32px; background: #fff; border-bottom: 1px solid #ccc;}
+.panel_bd{ background: #fff;}
+/* panel: theme sliver */
+.panel_sliver{ border: 1px solid #f5f5f5;}
+.panel_sliver .panel_hd{ line-height: 32px; background: rgb(255,255,255);
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(245,245,245,1) 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(245,245,245,1))); background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(245,245,245,1) 100%); background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(245,245,245,1) 100%); background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(245,245,245,1) 100%); background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(245,245,245,1) 100%);}
+.panel_sliver .panel_bd{ background: #fff;}
+/* panel end */
+
+/* restaurant List main */
+.restaurant_list {}
+.rest_item_group{ border-left: 1px solid #ddd\9;}
+.rest_item_group > li:nth-child(5n){ border-right: none;}
+.rest_item_group > li:nth-last-child(1),
+.rest_item_group > li:nth-last-child(2),
+.rest_item_group > li:nth-last-child(3),
+.rest_item_group > li:nth-last-child(4),
+.rest_item_group > li:nth-last-child(5){ border-bottom: none;}
+
+.rest_item,
+.rest_placehold,
+.favorite_add{ float:left; width: 20%; min-height: 90px; padding: 10px 0 0 10px; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; border: 1px solid #ddd; border-left: none; border-top: none; position: relative;}
+
+.rest_item .intro .thumb{ display: block; border: 1px solid #ddd;}
+.rest_item .intro{ margin-right: 8px;}
+.rest_item .intro .thumb_desc { font-size: 12px; text-align: center; color: #666; line-height: 18px; margin-top: 8px;}
+.rest_item .intro .thumb_desc.busy{ background: #ffe2e2;}
+.rest_item .desc{ }
+.rest_item .desc dd{ font-size: 12px; color: #666;}
+.rest_item .desc .name{ color: #333; width: 108px; font-size: 14px;}
+.rest_item .desc .name a{ color: #333;}
+.rest_item .desc .name:hover a{ color: #0088c8; text-decoration: underline;}
+.rest_item .desc .rank{ line-height: 12px; color: #9a9a9a; margin-top: 2px;}
+.rest_item .desc .rank_bd{ display: inline-block; width: 60px; height: 12px; font-size: 0; background: url("../../../assets/images/bg_rank_star.png") no-repeat 0 -15px;}
+.rest_item .desc .rank_progress{ display: inline-block; height: 12px; background: url("../../../assets/images/bg_rank_star.png") no-repeat;}
+.rest_item .desc .statue_text{ margin-top: 12px; color: #999;}
+.rest_item .desc .statue_btn{ margin-top: 10px;}
+.rest_item .desc .btn{ display: inline-block; line-height: 18px; padding: 0 4px; border: 1px solid #ddd;}
+.rest_item .desc .btn_default{ background: #f5f5f5;}
+.rest_item .desc .btn_success{ border: 1px solid #59b170; color: #59b170;}
+.rest_item .desc .btn_danger{ color: #ff8400;}
+.rest_item .desc .btn_danger:hover{ border-color: #ff8400;}
+
+.rest_item:hover .desc .statue_text{ display: none;}
+.rest_item:hover .desc .name a{ color: #0473B9;}
+.rest_item:hover{ background: #f8f8f8;}
+.rest_item:hover .desc .name{ color: #0473B9;}
+
+.rest_item .desc .icon_list{ margin-top: 5px;}
+.rest_item .icon{ display: inline-block; width: 15px; height: 15px; background: url("../../../assets/images/restaurant_iconSprite.png") no-repeat;}
+.rest_item .icon.icon_new{ background-position: 0 0;}
+.rest_item .icon.icon_first{ background-position: 0 0;}
+.rest_item .icon.icon_new{ background-position: 0 0;}
+.rest_item .icon.icon_first{ background-position: 0 -20px;}
+.rest_item .icon.icon_jian{ background-position: 0 -40px;}
+.rest_item .icon.icon_dikou{ background-position: 0 -60px;}
+.rest_item .icon.icon_banjia{ background-position: 0 -80px;}
+.rest_item .icon.icon_peiqian{ background-position: 0 -100px;}
+.rest_item .icon.icon_ticket{ background-position: 0 -120px;}
+.rest_item .icon.icon_match{ background-position: 0 -140px;}
+.rest_item .icon.icon_pay{ background-position: 0 -160px;}
+.rest_item .icon.icon_song{ background-position: 0 -180px;}
+.rest_item .icon.icon_gift{ background-position: 0 -200px;}
+
+/* favorite restaurant */
+.favorite{ display: block;}
+.favorite_hd{ display: none; position: absolute; right: 0; top: 0; width: 17px; height: 17px; background: url("../images/item_favorite_page.png") no-repeat;}
+.favorite_bd{ position: absolute; right: 10px; bottom: 7px; font-size: 13px;}
+.favorite_statue{ display: none; background: #f8f8f8;}
+.favorite_statue .star { display: inline-block; width: 15px; height: 15px; font-size: 0; background: url("../images/favorite_off.png") no-repeat; vertical-align: middle;}
+.favorite_statue a{ margin-left: 4px; color: #999; vertical-align: middle; font-size: 14px;}
+.favorite_statue a:hover{ color: #0473B9; text-decoration: underline;}
+.favorite_on{ padding-left: 3px;}
+.favorite_on .star{background: url("../images/favorite_on.png") no-repeat;}
+.favorite_on a:hover{ color: #0473B9; text-decoration: underline;}
+.favorite_off{ padding-left: 5px;}
+.favorite_added .favorite_hd{ display: block;}
+.rest_item:hover .favorite_off{ display: block;}
+.rest_item.favorite_added:hover .favorite_off{ display: none;}
+.rest_item.favorite_added:hover .favorite_on{ display: block;}
+
+/* restaurant closed statue */
+.rest_item[data-rest-flag~="closed"]{ background: url("../../../assets/images/restaurant_closed_bg.png");}
+.rest_item[data-rest-flag~="closed"]:hover{ background: #f8f8f8;}
+.rest_item[data-rest-flag~="closed"]:hover .name a{ color: #0473B9;}
+.rest_item[data-rest-flag~="closed"] .intro *,
+.rest_item[data-rest-flag~="closed"] .desc *{ color: #999;}
+.rest_item[data-rest-flag~="closed"] img,
+.rest_item[data-rest-flag~="closed"] [class^="icon"]{ opacity: 0.6;}
+
+/* restaurant hover info-panel */
+.rest_hover_info{ display: none; width: 360px; background: #ffffe0; border: 1px solid #c6c6c6; position: absolute; right: -368px; top: -9px; z-index: 2000; box-shadow: 0 1px 2px rgba(0,0,0,0.3);}
+.rest_hover_info dl{ padding: 10px; color: #333;}
+.rest_hover_info dt{ font-size: 14px;}
+.rest_hover_info dd{ font-size: 12px; line-height: 20px; margin-top: 4px;}
+.rest_hover_info dd .danger{ color: #ff9933;}
+.rest_hover_info dd strong{ font-weight: bold;}
+.rest_hover_info dd .icon{vertical-align: middle; margin-right: 6px;}
+.rest_hover_info .bg_arrow{ width: 5px; height: 7px; background: url("../images/rest_hover_info_arrow.png") no-repeat; position: absolute; top: 22px; left: -5px; }
+
+/* when in a short screen, some hover info-panel's position changed */
+@media screen and (max-width: 1599px){
+    .rest_item_group .rest_item:nth-child(5n-1) .rest_hover_info,
+    .rest_item_group .rest_item:nth-child(5n) .rest_hover_info{ right:auto; left: -368px;}
+    .rest_item_group .rest_item:nth-child(5n-1) .rest_hover_info .bg_arrow,
+    .rest_item_group .rest_item:nth-child(5n) .rest_hover_info .bg_arrow{ left: auto; right: -5px; background: url("../images/rest_hover_info_arrowRight.png") no-repeat;}
+}
+.rest_hover_info.narrowScreen{ right:auto; left: -368px;}
+.rest_hover_info.narrowScreen .bg_arrow{ left: auto; right: -5px; background: url("../images/rest_hover_info_arrowRight.png") no-repeat;}
+
+.rest_hover_info.bottomHover{ bottom: 10px; top: auto;}
+.rest_hover_info.bottomHover .bg_arrow{ left: -5px; right: auto; top: auto; bottom: 54px; background: url("../images/rest_hover_info_arrow.png") no-repeat;}
+
+.rest_hover_info.bottomHover.narrowScreen{ bottom: 10px; top: auto;}
+.rest_hover_info.bottomHover.narrowScreen .bg_arrow{ left: auto; right: -5px; bottom: 54px; background: url("../images/rest_hover_info_arrowRight.png") no-repeat;}
+
+
+/* restaurant List main end */
+
+/*
+ * restaurant List longer
+ * dependencies: restaurant_List
+ * description: have a long thumb 67*42;
+ * used: index-fujinTuangou
+*/
+.restaurant_list_long{}
+.restaurant_list_long .thumb{ padding: 2px;}
+.restaurant_list_long .desc{ width: 85px; margin-left: 10px;}
+.restaurant_list_long .desc *:hover{ text-decoration: none;}
+.restaurant_list_long .desc .name:hover a,
+.restaurant_list_long .rest_item:hover .desc .name a{ color: #333; text-decoration: none;}
+.restaurant_list_long .desc .price_txt{ color: #666;}
+.restaurant_list_long .desc .price_txt .old{ margin-left: 5px; color: #999; text-decoration: line-through;}
+.restaurant_list_long .desc .statue_btn{ margin-top: 6px;}
+.restaurant_list_long .desc .statue_btn .btn{ line-height: 22px; padding: 0 13px;}
+/* restaurant List x2 */
+
+
+/* my favorite */
+.m_myFavorite{}
+.m_myFavorite .rest_item .desc .desc_txt{ margin-top: 15px;}
+.m_myFavorite .rest_item .desc .rank{ margin-top: 10px;}
+.m_myFavorite .rest_item .desc .statue_text{ margin-top: 11px;}
+
+/* cancel favorite item */
+.m_myFavorite .rest_item .btn_cancel{ display: none; position: absolute; right: 8px; top: 8px; width: 14px; height: 14px; background: url("../../../assets/images/icon_cancel.png") no-repeat center center;}
+.m_myFavorite .rest_item:hover .btn_cancel{ display: block; cursor: pointer; background: url("../../../assets/images/icon_cancel.png") no-repeat center center;}
+.m_myFavorite .rest_item .btn_cancel:hover{ background: url("../../../assets/images/icon_cancel_on.png") no-repeat center center;}
+
+/* add favorite item */
+.m_myFavorite .favorite_add { position: relative;}
+.m_myFavorite .favorite_add:hover{ cursor: pointer; background: #fff;}
+.m_myFavorite .favorite_placehold{ height: 70px; background: url("../../../assets/images/icon_favorateAdd.png") no-repeat center center;}
+.m_myFavorite .favorite_add:hover .favorite_placehold{ background: url("../../../assets/images/icon_favorateAdd_on.png") no-repeat center center;}
+/* my favorite end  */
+
+
+/* brand restaurant */
+.m_brandRest{}
+.m_brandRest .panel_hd .goBrand{ display: inline-block; line-height: 17px; padding: 0 7px; margin-right: 4px; background: #0c9efc; border-radius: 3px;}
+.m_brandRest .panel_hd .goBrand:hover{ transform: scale(1.15); -webkit-transform: scale(1.15);}
+/* brand restaurant end  */
+
+/* restaurant category */
+.m_restCategory{}
+.m_restCategory .panel_hd{ line-height: 40px; position: relative; z-index: 1;}
+.m_restCategory .main_hd{ z-index: 2;}
+.panel_hd .checkbox{ height: 40px; line-height: 40px; margin-left: 12px; color: #333;}
+.panel_hd .checkbox input,
+.panel_hd .checkbox span{ vertical-align: middle;
+    cursor: pointer;}
+.panel_hd .checkbox input{ margin-right: 1px;}
+.panel_hd .checkbox .tube{ display: inline-block; width: 1px; height: 19px; margin-top: 13px; background: url("../../../assets/images/bg_restcategory_tube.png") no-repeat center center;}
+.panel_hd .check_olpay .mark_new{ width: 31px; height: 17px; background: url("../../../assets/images/category_mark_new.png") no-repeat; position: absolute; top: -3px; left: 19px;}
+.panel_hd .check_olpay:hover .mark_new{animation:popUpDown 0.8s infinite; -moz-animation:popUpDown 0.8s infinite; -webkit-animation:popUpDown 0.8s infinite; -o-animation:popUpDown 0.8s infinite; }
+
+/* up to down, then back to up, infinite*/
+@keyframes popUpDown{
+    0% {
+        top: -5px;
+    }
+    50%{
+        top: -9px;
+    }
+    100% {
+        top: -5px;
+    }
+}
+@-webkit-keyframes popUpDown{
+    0% {
+        top: -5px;
+    }
+    50%{
+        top: -9px;
+    }
+    100% {
+        top: -5px;
+    }
+}
+.panel_hd .mealType{ width: 60px; text-align: center; z-index: 1000; position: relative;}
+.panel_hd .mealType_hd{ position: relative; height: 41px; line-height: 45px; cursor: pointer;}
+.panel_hd .mealType.active .mealType_hd{ height:40px; background: #f0f0f0; border: 1px solid #d0d0d0; top: -2px; left:-1px; padding-left: 2px; padding-top:1px;}
+.panel_hd .mealType_hd:before{ content:""; width:0;height:0; line-height:0; border-width:4px; border-style:solid; border-color: #6e6e6e transparent transparent transparent; position: absolute; top: 20px; right: 5px;}
+.panel_hd .mealType.active .mealType_hd:before{ top:21px; right:3px;}
+.panel_hd .mealType_bd{ width: 58px; left:-1px; top: 41px; z-index: 1000;  background: #f0f0f0; border: 1px solid #d0d0d0; border-top: 0; position: absolute;}
+.panel_hd .mealType_bd li{ line-height: 30px;}
+.panel_hd .mealType_bd li:hover{ background: #7ab0d4; cursor: pointer;}
+
+/* category slider bar */
+.category_bar{ margin-right: 13px;}
+.category_bar .category_box{ width: 142px; height: 12px; margin-top: 14px; -webkit-box-shadow: inset 0 1px 2px 1px rgba(148,148,148,0.5); -moz-box-shadow: inset 0 1px 2px 1px rgba(148,148,148,0.5); box-shadow: inset 0 1px 2px 1px rgba(148,148,148,0.5); border-radius: 12px;}
+.category_bar .category_box .slider{ margin-left: 0!important; margin-right: 0!important; border-radius: 12px;}
+.category_bar .category_box .slider .highlight-track{ width: 142px; height: 12px; background: #8bbedd; top: 50%; margin-top: 0!important; top: 0!important; border-radius: 12px;}
+.category_bar .category_box .slider .dragger{ width: 22px; height: 27px; background: url("../../../assets/images/category_progress_btn.png") no-repeat;
+    cursor: pointer; position: absolute; right: 0; margin-top: -20px!important;}
+.category_bar .category_text{ width: 60px; margin: 0 0 0 6px; text-align: center;}
+.m_restCategory .rest_item_group{ border-left: 1px solid #ddd;}
+.m_restCategory .rest_item_group > li{ border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;}
+/* restaurant category end  */
+
+

@@ -1,0 +1,31 @@
+@charset "utf-8";
+/*
+ * author: sam mok,
+ * begin at: 2014年11月4日 20:14:22 AM;
+*/
+body{ background: #c0deed;}
+a:hover{ text-decoration: none;}
+
+/* font setting */
+.fam{ font-family: "microsoft yahei";}
+.c_white,.c_fff{ color: #fff;}
+.c_black,.c_000{ color: #000;}
+.c_333{ color: #333;}
+.c_666{ color: #666;}
+.c_777{ color: #777;}
+.c_999{ color: #999;}
+.c_ccc{ color: #ccc;}
+.c_fe6000{ color: #fe6000;}
+
+/* width preset */
+.w950{ width: 950px;}
+
+.ml12{ margin-left:12px;}
+.mr12{ margin-right:12px;}
+
+/* transition preset */
+.ts1{ transition: all 0.1s; -webkit-transition: all 0.1s;}
+.ts2{ transition: all 0.2s; -webkit-transition: all 0.2s;}
+
+#background{ position: fixed; top: 0; bottom: 0; width: 100%; background: url("../../../assets/images/background.jpg") repeat-x;}
+

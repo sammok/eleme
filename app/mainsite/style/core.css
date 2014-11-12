@@ -1,0 +1,13 @@
+@charset "utf-8";
+/*
+ * author: sam mok,
+ * begin at: 2014年11月4日 20:14:22 AM
+*/
+.area_select{ margin-top: 16px;}
+.goToHref{ font-size: 0; height: 0; line-height: 0; overflow: hidden;}
+
+.noSelect{-moz-user-select: none; -webkit-user-select: none; -ms-user-select: none; user-select: none;}
+.brNone{ border-right: 0!important;}
+.bbNone{ border-bottom: 0!important;}
+
+.screen_bd{ z-index: 10;}

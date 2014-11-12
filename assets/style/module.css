@@ -1,0 +1,121 @@
+@charset "utf-8";
+/*
+ * author: sam mok,
+ * begin at: 2014年11月4日 20:14:22 AM;
+*/
+
+/* eleme public header */
+.eleme_top{ height: 40px; line-height: 40px; background: url("../images/top_bg.png") repeat-x; position: relative; z-index: 1000;}
+.eleme_top .logo{ display: block; width: 90px; height: 40px; background: url("../images/top_logo.png") no-repeat;}
+.eleme_top .app{ line-height: 24px; padding: 0 4px 0 18px; margin-top: 8px; color: #ababab; background: #2d2d2d url("../images/icon_phone.png") no-repeat 3px 5px;border-radius: 3px;}
+.eleme_top .app:hover{ color: #fff;}
+
+.m_search{ margin-top: 7px;}
+.search_txt{ display: block; width: 163px; height: 16px; line-height: 16px; padding: 5px 10px 3px 27px;     border: 1px solid #141414; border-radius: 3px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.3),0 1px 0 #2a2a2a; background: #4e4e4e; -webkit-transition: all .2s linear 0s; transition: all .2s linear 0s; outline: none;}
+.search_txt:focus{ color: #282222; background: #fff;}
+.search_btn{ width: 14px; height: 13px; background: url("../images/icon_zoom_off.png") no-repeat; top: 6px; left: 7px; border: none; cursor: pointer; outline: }
+/* search bar end */
+
+.top_nav{ font-size: 13px; }
+.top_nav li{ float: left; margin: 0 10px;}
+.top_nav a{ display: block; color: #ccc;}
+.top_nav a:hover{ color: #fff;}
+.top_nav .icon_cart{ width: 16px; height: 19px; margin-left: 23px; background: url("../images/icon_cart.png") no-repeat;}
+.top_nav .icon_email{ width: 18px; height: 15px; margin: 13px 0 0 1px; background: url("../images/icon_email.png") no-repeat;}
+/* main nav end */
+
+.top_user{}
+.top_user .user_unlogin .pipe{ padding: 0 1px;}
+.top_user .user_name{ display: block; font-family:arial; padding: 0 20px 0 0;}
+.top_user .user_name:before{ content:""; width:0;height:0; line-height:0; border-width:5px; border-style:solid; border-color: #666 transparent transparent transparent; position: absolute; top: 18px; right: 5px; transition: all 0.45s; -webkit-transition: all 0.45s;}
+.top_user .user_login:hover .user_menu{ display: block; }
+.top_user .user_login:hover .user_name:before{ transform: rotate(180deg); -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); top: 12px;}
+.top_user .user_menu{ width: 100px; padding: 5px 0; background: #fff; border-radius: 4px; box-shadow: 0 0 6px #525252;}
+.top_user .user_menu li:hover{ background: #eee;}
+.top_user .user_menu a{ display: block; line-height: 28px; padding: 0 15px; font-size: 12px;}
+.icon_person{ width: 12px; height: 12px; background: url("../../assets/images/icon_person.png") no-repeat;}
+.icon_star{ width: 12px; height: 12px; background: url("../../assets/images/icon_star.png") no-repeat;}
+.icon_map{ width: 12px; height: 13px; background: url("../../assets/images/icon_map.png") no-repeat;}
+.icon_setting{ width: 13px; height: 13px; background: url("../../assets/images/icon_setting.png") no-repeat;}
+.icon_shutdown{ width: 13px; height: 12px; background: url("../../assets/images/icon_shutdown.png") no-repeat;}
+/* eleme public header end */
+
+/* focus banner module 952*80 */
+.m_focus{ height: 80px; margin-top: 14px; z-index: 100;}
+.focus_hd{ bottom: 5px; right: 7px;}
+.focus_hd li{ display: inline-block; width: 15px; height: 15px; line-height: 15px; margin-right: 5px; text-align: center; color: #666; font-size: 12px; background: rgba(255, 255, 255, 0.6); background: #fff\9; transition: all 0.2s; -webkit-transition: all 0.2s; cursor: pointer;z}
+.focus_hd li:hover,
+.focus_hd li.active{color: #fff; font-weight: bold; background: rgba(226, 81, 0, 1); background: #e15100\9;}
+.focus_bd ul{ position: relative;}
+.focus_bd ul img{ vertical-align: top;}
+/* focus banner module */
+
+/* footer */
+.eleme_footer{ line-height: 30px; font-size: 12px; color: #777;}
+.footer_nav{}
+.footer_nav a:hover{ opacity: 0.65;}
+.footer_layer{}
+.footer_layer_item{ display: inline-block; width: 90px;}
+.footer_layer_text{ line-height: 16px;}
+.footer_layer_tube{ display: inline-block; height: 32px; margin: 0 -6px 0 -13px;  border-right: 1px solid #bbb;}
+/* footer end */
+
+
+/** TODO: Tooltips JQuery Plus */
+/* This is the default Tooltipster theme (feel free to modify or duplicate and create multiple themes!): */
+.tooltipster-default {
+    max-width: 150px;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    text-align: center;
+    z-index: 5000;
+}
+.tooltipster-content:after{ content:""; width:0;height:0; line-height:0; border-width:5px; border-style:solid; border-color: #000 transparent transparent transparent; position: absolute; bottom: -10px; right: 50%; margin-left: 8px; transition: all 0.45s; -webkit-transition: all 0.45s; opacity: 0.65;}
+
+/* Use this next selector to style things like font-size and line-height: */
+.tooltipster-default .tooltipster-content {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 21px;
+    padding: 0 8px;
+    overflow: hidden;
+}
+
+/* This is the base styling required to make all Tooltipsters work */
+.tooltipster-base {
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9999999;
+    pointer-events: none;
+    width: auto;
+    overflow: visible;
+}
+.tooltipster-base .tooltipster-content {
+    overflow: hidden;
+}
+
+.tooltipster-fade {
+    opacity: 0;
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    -o-transition-property: opacity;
+    -ms-transition-property: opacity;
+    transition-property: opacity;
+}
+.tooltipster-fade-show {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+

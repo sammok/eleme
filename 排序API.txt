@@ -1,0 +1,74 @@
+# Restaurant Item:
+
+一共有三个方面:
+	- css预设
+	- 结构预设
+	- js按钮绑定预设
+
+CSS eg:
+	    /* 各种状态的css  如支持在线支付 */
+            .filter_rest_open .otherList [data-rest-flag~='o'],
+            .filter_rest_olpay .otherList [data-rest-flag~='z'],
+            .filter_rest_chaoshi .otherList [data-rest-flag~='c'],
+            .filter_rest_gift .otherList [data-rest-flag~='g'],
+
+	    /* 口味的css */
+            .filter_mealtype_chinese [data-rest-meal~='cn'],
+            .filter_mealtype_west [data-rest-meal~='ws'],
+            .filter_mealtype_hongkong [data-rest-meal~='hk'],
+            .filter_mealtype_milktea [data-rest-meal~='mt'],
+            .filter_mealtype_bbq [data-rest-meal~='bbq'],
+            .filter_mealtype_korea [data-rest-meal~='kr'],
+            .filter_mealtype_dessert [data-rest-meal~='td'],
+            .filter_mealtype_humberger[data-rest-meal~='hbb']{ display: none!important;}
+
+
+
+HTML eg:
+
+	<li class="item rest_item clearfix" data-rest-meal="ws" data-rest-flag="o , c , closed" data-rest-avgprice="20">
+		// restaurant item body;
+	</li>
+
+
+	// 状态flag(如 支持在线付款, 营业中);
+
+	data-rest-flag="o , c , g , closed"  // 当你不满足这个筛选条件的时候就挂上这个筛选条件(反向标记它的条件);
+	o = 不支持onlinepay
+	c = 不支持超时赔付chaoshipeifu
+	g = 不支持赠送 gift  (如赠送冰红茶)
+	closed = 当前收摊(这个标记不取反)
+
+
+	// 口味筛选标记;
+	data-rest-meal="ws"
+
+	ws = 不是 west
+	cn = 不是 chinese
+	nc = 不是 milk tea
+	bbq = 不是 bbq
+	hs = 不是 korea
+	td = 不是 甜点
+	hb = 不是 humberger
+
+	一切 data-rest-flag 标记值都取反, 不支持的就标记  除了 打烊的店铺 data-rest-flag="closed"  标记为closed;
+
+
+JS filter button Bind:
+
+	// *** bind checkbox class filter;
+        $(".m_restCategory #check_open").click( function (){
+            var that = $('this');
+            bindFeatureFilter('filter_rest_open', that);
+        });
+
+
+        // *** bind meal type filter
+        $(".m_restCategory .mealType_zs").click( function (){
+            var that = $('this');
+            bindMealTypeFilter('filter_mealtype_chinese', that);
+        });
+
+	
+
+	
